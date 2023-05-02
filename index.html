@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteApp</title>
+
+  <!-- LINKS TO GOOGLEFONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- LINK TO ICONS -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- LINKS TO CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <div class="sidebar-wrapper">
+    <div class="sidebar">
+      <div class="search-form">
+        <input type="search" name="" id="" class="search-form__input" placeholder="Search">
+        <button class="tag-button">Newer first</button>
+      </div>
+      <div class="notes-preview">
+        <div class="note-preview">
+          <h3 class="note-preview__title">Note title dkdjkd kdjd kj dkfjd kjdk kjk kjd d jfkd jkdf kdjf k jkdf dkfj kj dfk</h3>
+          <p class="note-preview__text">Some text from note jdkfjd fk dkfjd k kdjf dkfj djf dkjf dk djfk dfj </p>
+          <p class="note-preview__date">02.05.2023</p>
+        </div>
+        <div class="note-preview">
+          <h3 class="note-preview__title">Note title</h3>
+          <p class="note-preview__text">Some text from note</p>
+          <p class="note-preview__date">02.05.2023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="main-menu">
+
+      <div class="main-menu__left">
+        <button class="button">
+          <span class="material-symbols-outlined">
+            menu
+            </span>
+        </button>
+      </div>
+
+      <div class="main-menu__title">
+        <div class="title">NotesApp</div>
+      </div>
+
+      <div class="main-menu__right">
+        <button class="button">
+          <span class="material-symbols-outlined">
+            add_box
+            </span>
+        </button>
+        <button class="button">
+          <span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span>
+        </button>
+        <button class="button">
+          <span class="material-symbols-outlined">
+            brightness_4
+            </span>
+        </button>
+        <button class="button button_denger">
+          <span class="material-symbols-outlined">
+            delete
+            </span>
+        </button>
+      </div>
+
+    </div>
+    <div class="note">
+      <h1 class="note__title" contenteditable="true">Title</h1>
+      <p class="note__content" contenteditable="true">Some text</p>
+    </div>
+  </div>
+
+</body>
+</html>
