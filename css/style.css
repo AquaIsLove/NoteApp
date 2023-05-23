@@ -6,7 +6,9 @@
   font-size: var(--fs);
   box-sizing: border-box;
   transition: color var(--tran-1), background-color var(--tran-1);
-  /* scrollbar-width: 5px; */
+
+  /* Убираум синюю заливку при нажатии на телефонах*/
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -64,11 +66,9 @@
 
 .page {
   width: 100%;
-
   display: flex;
   flex-direction: row;
   gap: 0;
-
   overflow: hidden;
 }
 
@@ -187,6 +187,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   padding: 6px;
   padding-inline: 20px;
 }
@@ -212,18 +213,16 @@
   gap: 5px;
 }
 
-.main-menu__submenu{
-  overflow: hidden;
+.main-menu-additional {
   display: flex;
-  visibility: hidden;
   gap: 5px;
   justify-content: center;
-  align-items: center;
   width: 0;
   transition: width var(--tran-1);
+  overflow: hidden;
 }
-.main-menu__submenu_visible{
-  visibility: visible;
+
+.main-menu-additional_visible {
   width: 100%;
 }
 
@@ -240,10 +239,12 @@
   cursor: pointer;
   transition: background-color var(--tran-1);
 }
+
 .button:hover {
   background-color: var(--bg-color-active);
 }
-.button_active{
+
+.button_active {
   background-color: var(--bg-color-active);
 }
 
@@ -251,18 +252,19 @@
   background-color: var(--bg-color-main);
   color: var(--color-danger);
 }
+
 .button_danger:hover {
   background-color: var(--bg-color-danger);
 }
 
-.submenu_btn{
+.main-menu-additional-btn-icon {
   transform: rotate(180deg);
-}
-.submenu_btn_active{
-  transform: rotate(0);
+  transition: transform var(--tran-1);
 }
 
-
+.main-menu-additional-btn-icon_active {
+  transform: rotate(0deg);
+}
 
 .title {
   font-size: var(--fs);
