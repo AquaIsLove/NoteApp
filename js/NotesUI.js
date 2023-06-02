@@ -9,6 +9,7 @@ export default class NotesUI{
 
     this.notesPreview = this.root.querySelector('#notes-preview');
     this.addNoteBtn = this.root.querySelector('#add-note');
+    this.delNoteBtn = this.root.querySelector('#del-note');
     this.noteTitle = this.root.querySelector('#note-title');
     this.noteContent = this.root.querySelector('#note-content');
     this.searchInput = this.root.querySelector('#search-input');
@@ -18,9 +19,15 @@ export default class NotesUI{
       this.createNote();
     });
 
+    this.delNoteBtn.addEventListener('click', ()=>{
+      this.deleteNote();
+    })
+
+
+
     this.noteTitle.addEventListener('input', (e)=>{
       e.preventDefault();
-      console.log(e);
+      // console.log(e);
       if(e.inputType == 'insertParagraph'){
         this.noteContent.focus();
       }
@@ -113,6 +120,17 @@ export default class NotesUI{
 
     this.renderListNotes();
     this.renderNote();
+
+  }
+
+  deleteNote(){
+    this.notesData.deleteNote(this.activeNoteId)
+    // this.activeNoteId
+
+    if (this.notesData.getNotes().length == 1){
+      this.initUI();
+    }
+    this.renderListNotes();
 
   }
 

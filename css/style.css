@@ -99,6 +99,7 @@
 .content-wrapper {
   width: 100%;
   background-color: var(--bg-color-main);
+  overflow: hidden;
 }
 
 .search-form {

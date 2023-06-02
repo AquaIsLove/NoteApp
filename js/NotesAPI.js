@@ -84,6 +84,15 @@ export default class NotesAPI{
 
   }
 
+  searchNearest(id){
+    const notes = this.getNotes();
+    for(let i = 0; i < notes.length; i++){
+      if(notes[i].id == id){
+
+      }
+    }
+  }
+
 }
 
 
